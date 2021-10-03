@@ -6,3 +6,6 @@
 
 ## What it does
 Start animation on two svg objects at the same time 
+
+## Run
+`yarn start`
