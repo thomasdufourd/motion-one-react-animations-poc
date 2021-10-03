@@ -3,8 +3,11 @@ import {useMotionAnimate, useMotionTimeline } from "motion-hooks";
 import "./styles.css";
 import {ReactComponent as Player} from './assets/BluePlayerNb10.svg'
 import {TimelineDefinition} from "motion/types/targets/dom/timeline/types";
+import classNames from 'classnames';
 
 function App() {
+    // Use sthg like useWindowSize() and apply a resize factor to the keyframes values
+    // https://usehooks.com/useWindowSize/
     const sequence: TimelineDefinition = [
         [".player_10",
             {
@@ -54,8 +57,8 @@ function App() {
                 Replay
             </button>
             <div className={'pitch'}>
-                <Player className={'player_10'}/>
-                <Player className={'player_10_2'}/>
+                <Player className={classNames('player', 'player_10')}/>
+                <Player className={classNames('player', 'player_10_2')}/>
             </div>
         </div>
     );
